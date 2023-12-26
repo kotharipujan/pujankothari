@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Pujan Kothari, portfolio, pujan, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+    <meta name="description" content="Welcome to Pujan Kothari's Portfolio. Full-Stack Web Developer and Machine learning Enthusiast" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Favicon -->
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
+    <title>Portfolio | Pujan Kothari</title>
+<style>
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    background-color: #5a2d82;
+    padding: 20px;
+    justify-content: center;
+  }
+  .skill {
+    width: 120px;
+    height: 140px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  .skill img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  .skills-header {
+    text-align: center;
+    color: white;
+  }
+</style>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .project {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid black; /* Added black border */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .project:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .project img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .project:hover img {
+    transform: scale(1.1);
+  }
+
+  .overlay {
+    position: absolute;
+    top: 100%; /* Start hidden below the card */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    transition: top 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center the buttons */
+    padding: 20px;
+  }
+
+  .project:hover .overlay {
+    top: 0; /* Slide up on hover */
+  }
+
+  .project-name {
+    position: normal;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 0;
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .project:hover .project-name {
+    transform: translateY(-1200%); /* Lift up on hover */
+  }
+
+  .buttons {
+    display: flex; /* Align buttons side by side */
+    gap: 3px; /* Gap between buttons */
+  }
+
+  .button {
+    padding: 5px 10px; 
+    margin-bottom: 3px;/* Smaller padding for smaller buttons */
+    border: none;
+    border-radius: 5px;
+    background-color: #ffc107;
+    color: #333;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #e0a800;
+  }
+</style>
+</head>
+<body oncontextmenu="return false">
+
+<!-- pre loader -->
+<!-- <div class="loader-container">
+  <img draggable="false" src="./assets/images/preloader.gif" alt="">
+</div> -->
+
+<!-- navbar starts -->
+<header>
+        <a href="/" class="logo"><i class="fab fa-node-js"></i> Pujan</a>
+
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#work">Work</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+<!-- navbar ends -->
+
+
+<!-- hero section starts -->
+<section class="home" id="home">
+    <div id="particles-js"></div>
+
+    <div class="content">
+    <h2>Hi There,<br/> I'm Pujan <span>Kothari</span></h2>
+    <p>i am into <span class="typing-text"></span></p>
+    <a href="#about" class="btn"><span>About Me</span>
+      <i class="fas fa-arrow-circle-down"></i>
+    </a>
+    <div class="socials">
+        <ul class="social-icons">
+          <li><a class="linkedin" aria-label="LinkedIn" href="https://www.linkedin.com/in/pujankothari/" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" aria-label="GitHub" href="https://github.com/kotharipujan" target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="twitter" aria-label="Twitter" href="https://twitter.com/pujank28" target="_blank"><i class="fab fa-twitter"></i></a></li>
+
+          <li><a class="instagram" aria-label="Instagram" href="https://www.instagram.com/pu.jan"><i class="fab fa-instagram" target="_blank"></i></a></li>
+
+        </ul>
+      </div>
+    </div>
+<div class="image">
+    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
+</div>
+</section>
+<!-- hero section ends -->
+
+
+<!-- about section starts -->
+<section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+    
+    <div class="row">
+
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/profile2.jpeg" alt="">
+    </div>
+    <div class="content">
+        <h3>I'm Pujan</h3>
+        <span class="tag"> Developer</span>
+        
+        <p>Hello, My name is Pujan Kothari and  I am a Master's student at the University of Florida pursing Computer Science, building on a foundation in Computer Engineering from my undergraduate studies.
+I have honed a rich array of technical skills during my academic journey, bringing them to life through projects like Secureito.com. What distinguishes me is my proven ability to not only grasp diverse technologies but to apply this knowledge in creating solutions that address pressing real-world problems. 
+As I transition to a software developer role, I am eager to bring this blend of technical proficiency and innovative problem-solving to your team, contributing fresh and impactful perspectives.I look forward to opportunities where I can further apply and expand my skill set to make a tangible difference.
+
+ </p>
+        
+        <div class="box-container">
+            <!-- <div class="box">
+              <p><span> age: </span> 20</p>
+              <p><span> phone : </span> +91 XXX-XXX-XXXX</p>
+            </div> -->
+            <div class="box">
+              <p><span> email : </span> kotharipujan123@gmail.com</p>
+              <p><span> place : </span> Gainesville, Florida, 32608</p>
+            </div>
+        </div>
+        
+        <div class="resumebtn">
+            <a href="https://drive.google.com/file/d/1D7ZJscBqECw_5Qc-r7f9a0RybK_S9rPo/view?usp=sharing" target="_blank" class="btn"><span>Resume</span>
+                <i class="fas fa-chevron-right"></i>
+            </a>
+        </div>
+
+    </div>
+    </div>
+</section>
+<!-- about section ends -->
+
+<!-- skills section starts -->
+<section class="skills" id="skills">
+
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+
+    <div class="row" class="container">
+<div  class="skills-container">
+ <div class="skill">
+    <img src="./assets/images/skills/icons8-python-144.png" alt="Python">
+    Python
+  </div>
+  <!-- Java -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-java-50.png"  alt="Java">
+    Java
+  </div>
+  <!-- C -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-c-50.png" alt="C">
+    C
+  </div>
+  <!-- Erlang -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-erlang-50.png" alt="Erlang">
+    Erlang
+  </div>
+  <!-- JavaScript -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-javascript-50.png"alt="JavaScript">
+    JavaScript
+  </div>
+  <!-- PHP -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-php-50.png" alt="PHP">
+    PHP
+  </div>
+  <!-- SQL -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-sql-50.png" alt="SQL">
+    SQL
+  </div>
+  <!-- MySQL -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-mysql-50.png"alt="MySQL">
+    MySQL
+  </div>
+  <!-- MongoDB -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-mongodb-50.png"alt="MongoDB">
+    MongoDB
+  </div>
+  <!-- Reactjs -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-react-50.png"alt="Reactjs">
+    Reactjs
+  </div>
+  <!-- HTML5 -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-html-50.png" alt="HTML5">
+    HTML5
+  </div>
+  <!-- Nodejs -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-nodejs-50.png" alt="Nodejs">
+    Nodejs
+  </div>
+  <!-- JQuery -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-jquery-50.png" alt="JQuery">
+    JQuery
+  </div>
+  <!-- Figma -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-figma-50.png"alt="Figma">
+    Figma
+  </div>
+  <!-- AdobeXd -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-xd-50.png" alt="AdobeXd">
+    AdobeXd
+  </div>
+  <!-- Google Firebase -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-firebase-50.png"alt="Google Firebase">
+    Google Firebase
+  </div>
+  <!-- Amazon Web Services -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-aws-50.png"alt="Amazon Web Services">
+    AWS
+  </div>
+  <!-- Tableau -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-tableau-50.png" alt="Tableau">
+    Tableau
+  </div>
+  <!-- SSL -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-ssl-50.png" alt="SSL">
+    SSL
+  </div>
+  <!-- SEO -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-seo-50.png" alt="SEO">
+    SEO
+  </div>
+  <!-- Tkinter Package -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-tkinter-50.png" alt="Tkinter Package">
+    Tkinter
+  </div>
+  <!-- Scikit-Learn -->
+  <div class="skill">
+    <img src="./assets/images/skills/icons8-ml-50.png"alt="Machine learning">
+    Machine learning
+  </div>
+
+  <!-- Repeat for each skill -->
+</div>
+
+      </div>
+</div>
+</section>
+<!-- skills section ends -->
+
+
+<!-- education section starts -->
+<section class="education" id="education">
+
+  <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
+
+    <p class="qoute">Education is the most powerful weapon you can use to change the world.</p>
+
+    <div class="box-container">
+
+    <div class="box">
+        <div class="image">
+        <img draggable="false" src="https://www.ufl.edu/wp-content/uploads/sites/5/2022/12/UF-logo-500x500-1.png" alt="">
+        </div>
+        <div class="content">
+        <h3>Masters of Science | Computer Science</h3>
+        <p>University of Florida</p>
+        <h4>2022-2024 | Pursuing</h4>
+        <h4>CGPA - 3.92/4.0</h4>
+
+              </div>
+    </div>
+
+    <div class="box">
+      <div class="image">
+      <img draggable="false" src="https://media.collegedekho.com/media/img/institute/logo/Shah__Anchor.png?width=96" alt="">
+      </div>
+      <div class="content">
+      <h3>Bachelors of Engineering (BEng) | Computer Engineering</h3>
+      <p>Shah & Anchor Kutchhi Engineering College</p>
+      <h4>2018-2022 | Completed</h4>
+      <h4>CGPA - 8.74/10</h4>
+      </div>
+    </div>
+
+</div>
+</section>
+<!-- education section ends -->
+
+
+<!-- work project section starts -->
+<section class="work" id="work">
+
+  <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+  <div class="box-container">
+
+  <div class="project">
+    <img src="./assets/images/projects/storyfaith.JPG" alt="Project Image">
+    <div class="overlay">
+        <p>Collaborated with StoryFaith.com to develop a high-fidelity prototype on figma for their website, incorporating user feedback and insights from multiple interviews. Executed four iterative design cycles, resulting in a refined, user-centric prototype that enhanced usability and aesthetic appeal..</p>
+        <a href="https://www.figma.com/file/Y5EPMXDvmHilB6fOdllIeZ/Dynamic-Prototyping-Cycle-3?type=design&node-id=0%3A1&mode=design&t=ImEvCh01kmIYgxzs-1" target="_blank" class="button">View</a>
+        <a href="http://github.com/user/repo" target="_blank" class="button">Code</a>
+    </div>
+    <div class="project-name">High-Fidelity Prototype Development for StoryFaith.com</div>
+  </div>
+
+  <div class="project">
+    <img src="./assets/images/projects/secureito.JPG"alt="Project Image">
+    <div class="overlay">
+        <p>Pioneered Secureito with React.js, JavaScript, HTML, and JSON, delivering a user-friendly interface allowing users to detect and secure email data breaches, and enhance personal data protection. Revamped the data search algorithm strategically, leading to a remarkable 60% reduction in website detail search time, significantly enhancing user experience and efficiency.</p>
+        <a href="https://www.secureito.com/" target="_blank" class="button">View</a>
+        <a href="http://github.com/user/repo" target="_blank" class="button">Code</a>
+    </div>
+    <div class="project-name">Secureito.com</div>
+  </div>
+
+    <div class="project">
+    <img src="./assets/images/projects/twitter.png"alt="Project Image">
+    <div class="overlay">
+        <p>Architected a a Twitter-like web platform using Erlang, HTML, and CSS with core features including user registration, subscription services, and tweeting and retweeting functionalities. Enhanced system robustness to support 5,000 active users, verified through performance simulation.</p>
+        <a href="" target="_blank" class="button">View</a>
+        <a href="http://github.com/user/repo" target="_blank" class="button">Code</a>
+    </div>
+    <div class="project-name">Twitter Clone Engine</div>
+  </div>
+
+    <div class="project">
+    <img src="./assets/images/projects/bittorent.png"alt="Project Image">
+    <div class="overlay">
+        <p>Employed a peer-to-peer (P2P) system using java, utilizing autonomous computers that functioned as a distributed repository of files, enabling participating computers to search for and download files from each other.</p>
+        <a href="" target="_blank" class="button">View</a>
+        <a href="http://github.com/user/repo" target="_blank" class="button">Code</a>
+    </div>
+    <div class="project-name">BitTorrent-based file sharing using socket programming</div>
+  </div>
+
+      <div class="project">
+    <img src="./assets/images/projects/employee.JPG"alt="Project Image">
+    <div class="overlay">
+        <p>Spearheaded the development of a predictive system enabling the organization to forecast employee attrition, and meticulously assessed various machine learning algorithms. Achieved an impressive 85.6% accuracy rate through the implementation of the AdaBoost model.</p>
+        <a href="" target="_blank" class="button">View</a>
+        <a href="http://github.com/user/repo" target="_blank" class="button">Code</a>
+    </div>
+    <div class="project-name">Employee Attrition and Turnover Prediction System</div>
+  </div>
+    <div class="project">
+    <img  src="./assets/images/projects/bert.JPG" alt="Project Image">
+    <div class="overlay">
+        <p>Conducted an in-depth research initiative evaluating various BERT models (RoBERTa, Electra, DistillBERT, ALBERT) for their efficacy in hate speech detection, utilizing 135,000 tweets dataset and focusing on targeted hashtags to facilitate the analysis.
+Attained 92.35% precision in hate speech detection using the Electra model, honed through custom text processing and BERT hyperparameter optimization, enhancing system efficiency by over 5%.</p>
+        <a href="" target="_blank" class="button">View</a>
+        <a href="" target="_blank" class="button">Code</a>
+    </div>
+    <div class="project-name">Comparative Study of BERT Models in Hate Speech Detection</div>
+  </div>
+
+
+</div>
+
+
+
+</section>
+<!-- work project section ends -->
+
+<!-- experience section starts -->
+<section class="experience" id="experience"  >
+
+  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
+
+  <div class="timeline">
+
+    <div class="container right">
+      <div class="content">
+        <div class="tag">
+          <h2>University of Florida</h2>
+        </div>
+        <div class="desc">
+            <h3>Graduate Teaching Assistant</h3>
+            <h1>Aug 2023 - Dec 2023</h1>
+            <p>• Assisted Dr.Ye Xia to manage the "Computer Network" course; supervised JAVA network programming project for 177 students.
+ Facilitated student project initiation through weekly 3-hour Zoom Q&A sessions; ensured continuous support with timely email responses and over 10+ project updates.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container left">
+      <div class="content">
+        <div class="tag">
+          <h2>Mahapragya Public School</h2>
+        </div>
+        <div class="desc">
+            <h3>Web Developer | Internship</h3>
+            <h1>Nov 2020 - Feb 2021</h1>
+            <p>• Architected a user-friendly Content Management System (CMS) with JavaScript, HTML, CSS, MySQL following Agile methodology, streamlining the management of over 15 different pages for school administration and enhancing website accessibility for over 900 students and parents.
+• Implemented a gallery, reducing image creation time by 90% and improving workflow efficiency using PHP and SQL database.
+• Crafted a responsive UI/UX design system, increasing user engagement by 30% and enhancing content presentation.</p>
+        </div>
+      </div>
+    </div>
+
+ 
+  </div>
+
+
+
+</div>
+
+</section>
+<!-- experience section ends -->
+
+<!-- contact section starts -->
+<section class="contact" id="contact">
+  
+  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+  <div class="container">
+    <div class="content">
+      <div class="image-box">
+        <img draggable="false" src="./assets/images/contact1.png" alt="">
+      </div>
+    <form id="contact-form">
+      
+      <div class="form-group">
+        <div class="field">
+          <input type="text" name="name" placeholder="Name" required>
+          <i class='fas fa-user'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="email" placeholder="Email" required>
+          <i class='fas fa-envelope'></i>
+        </div>
+        <div class="field">
+          <input type="text" name="phone" placeholder="Phone">
+          <i class='fas fa-phone-alt'></i>
+        </div>
+        <div class="message">
+        <textarea placeholder="Message" name="message" required></textarea>
+        <i class="fas fa-comment-dots"></i>
+        </div>
+        </div>
+      <div class="button-area">
+        <button type="submit">
+          Submit <i class="fa fa-paper-plane"></i></button>
+      </div>
+    </form>
+  </div>
+  </div>
+</section>
+<!-- contact section ends -->
+
+
+<!-- footer section starts -->
+<section class="footer">
+
+  <div class="box-container">
+
+      <div class="box">
+          <h3>Pujan's Portfolio</h3>
+          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. </p>
+      </div>
+
+      <div class="box">
+          <h3>quick links</h3>
+          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
+          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
+          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
+          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
+          <a href="#work"><i class="fas fa-chevron-circle-right"></i> work</a>
+          <a href="#experience"><i class="fas fa-chevron-circle-right"></i> experience</a>
+      </div>
+
+      <div class="box">
+          <h3>contact info</h3>
+          <p> <i class="fas fa-phone"></i>+1 (352)721-1434</p>
+          <p> <i class="fas fa-envelope"></i> kotharipujan123@gmail.com</p>
+          <p> <i class="fas fa-map-marked-alt"></i> Gainesville, Florida, 32608</p>
+          <div class="share">
+
+              <a href="https://www.linkedin.com/in/pujankothari" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
+              <a href="https://github.com/kotharipujan" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
+              <a href="mailto:kotharipujan123@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+
+          </div>
+      </div>
+  </div>
+
+  <h1 class="credit">Designed with <i class="fa fa-heart pulse"></i> by <a href="https://www.linkedin.com/in/pujankothari"> Pujan Kothari</a></h1>
+
+</section>
+<!-- footer section ends -->
+
+
+<!-- scroll top btn -->
+<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+<!-- scroll back to top -->
+
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS STARTS ==== -->
+<!-- jquery cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- typed.js cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- particle.js links -->
+<script src="./assets/js/particles.min.js"></script>
+<script src="./assets/js/app.js"></script>
+
+<!-- vanilla tilt.js links -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- scroll reveal anim -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+
+<!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
+
+<script src="./assets/js/script.js"></script>
+
+</body>
+</html>
